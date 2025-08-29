@@ -141,12 +141,5 @@ VITE_ADMIN_PASSWORD=<same_strong_password>          # client (must match)
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/55f1ed52-4363-482f-93eb-dce8aae77b0c) and click on Share -> Publish.
+Use Netlify CLI - to deploy to the link in - https://aihackerdrom.netlify.app/
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
