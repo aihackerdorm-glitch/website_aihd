@@ -2,15 +2,13 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/55f1ed52-4363-482f-93eb-dce8aae77b0c
+**URL**: https://aihackerdrom.netlify.app/
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/55f1ed52-4363-482f-93eb-dce8aae77b0c) and start prompting.
+https://aihackerdrom.netlify.app/
 
 Changes made via Lovable will be committed automatically to this repo.
 
