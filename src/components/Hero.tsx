@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { TextRotate } from "@/components/ui/text-rotate"
 import { FallingPattern } from "@/components/ui/falling-pattern"
 import { Globe } from "@/components/ui/globe"
+import { ThreeHero } from "@/components/ui/three-hero"
 import { SignedIn, SignedOut, SignInButton } from '@clerk/clerk-react'
 import { Link } from 'react-router-dom'
 import { COPY } from "@/content/copy"
@@ -20,6 +21,10 @@ export function Hero() {
       
       {/* Background Effects */}
       <div className="absolute inset-0 hero-gradient opacity-90 z-10" />
+      {/* Three.js animated particles background */}
+      <div className="absolute inset-0 z-[15]">
+        <ThreeHero />
+      </div>
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid z-20" />
       {/* Globe Background (interactive) - hidden on mobile for performance */}
       <div className="absolute inset-0 z-[25] hidden md:flex pointer-events-none items-center justify-center">
@@ -52,6 +57,8 @@ export function Hero() {
       </div>
 
       <div className="relative z-40 text-center max-w-4xl mx-auto px-6">
+        {/* Subtle blue backdrop for text readability */}
+        <div className="absolute -inset-6 bg-sky-500/10 rounded-3xl blur-sm pointer-events-none" aria-hidden />
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}

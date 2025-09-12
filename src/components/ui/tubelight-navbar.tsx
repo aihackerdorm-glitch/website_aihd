@@ -41,6 +41,50 @@ export function NavBar({ items, className }: NavBarProps) {
     }
   }, [])
 
+  // Scrollspy: when on home route, observe in-page sections and update the active hash while scrolling
+  useEffect(() => {
+    if (location.pathname !== "/") return
+
+    const anchorIds = items
+      .filter((i) => i.url.includes("#"))
+      .map((i) => i.url.substring(i.url.indexOf("#") + 1))
+
+    const elements = anchorIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => Boolean(el))
+
+    if (elements.length === 0) return
+
+    // Use rootMargin to trigger when the section center reaches near the viewport center
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Find the entry closest to the top (but visible)
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top))
+
+        if (visible.length > 0) {
+          const id = visible[0].target.id
+          const newHash = `#${id}`
+          if (currentHash !== newHash) {
+            history.replaceState(null, "", `/${newHash}`)
+            setCurrentHash(newHash)
+            window.dispatchEvent(new HashChangeEvent("hashchange"))
+          }
+        }
+      },
+      {
+        root: null,
+        rootMargin: "-45% 0px -45% 0px",
+        threshold: [0.1, 0.25, 0.5],
+      }
+    )
+
+    elements.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [items, location.pathname])
+
   return (
     <div
       className={cn(
