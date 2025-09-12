@@ -50,7 +50,7 @@ export function Navigation() {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity group">
@@ -73,67 +73,46 @@ export function Navigation() {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
+          {/* Desktop Navigation (center) */}
+          <div className="hidden md:flex flex-1 justify-center">
             <NavBar items={filteredItems} className="relative" />
           </div>
           
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Open main menu</span>
-              {isMenuOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
-              )}
-            </button>
+          {/* Right-side actions (desktop) / Mobile hamburger */}
+          <div className="flex items-center">
+            {/* Desktop Right-side actions */}
+            <div className="hidden md:flex items-center space-x-4">
+              <SignedOut>
+                <Button asChild variant="outline">
+                  <SignInButton mode="modal" />
+                </Button>
+                <Button asChild>
+                  <a href="https://forms.gle/pbG4FWuLXUFnrmsb7" target="_blank" rel="noopener noreferrer">
+                    {COPY.hero.ctas.join}
+                  </a>
+                </Button>
+              </SignedOut>
+              <SignedIn>
+                <UserButton afterSignOutUrl="/" />
+              </SignedIn>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="md:hidden flex items-center">
+              <button
+                onClick={toggleMenu}
+                className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+                aria-expanded="false"
+              >
+                <span className="sr-only">Open main menu</span>
+                {isMenuOpen ? (
+                  <X className="block h-6 w-6" aria-hidden="true" />
+                ) : (
+                  <Menu className="block h-6 w-6" aria-hidden="true" />
+                )}
+              </button>
+            </div>
           </div>
-        </div>
-
-        {/* Auth Buttons */}
-        <div className="flex items-center space-x-2 sm:space-x-4 justify-self-end">
-          <SignedOut>
-            <SignInButton mode="modal">
-              <Button variant="outline" size="sm">
-                Sign In
-              </Button>
-            </SignInButton>
-            <Button asChild className="ai-button-primary" size="sm">
-              <a href="https://forms.gle/pbG4FWuLXUFnrmsb7" target="_blank" rel="noopener noreferrer">
-                Join Us
-              </a>
-            </Button>
-          </SignedOut>
-          <SignedIn>
-            <Link to="/dashboard">
-              <Button variant="outline" size="sm">
-                Dashboard
-              </Button>
-            </Link>
-            <UserButton afterSignOutUrl="/" />
-          </SignedIn>
-        </div>
-
-        {/* Desktop Right-side actions */}
-        <div className="hidden md:flex items-center space-x-4">
-          <SignedOut>
-            <Button asChild variant="outline">
-              <SignInButton mode="modal" />
-            </Button>
-            <Button asChild>
-              <a href="https://forms.gle/pbG4FWuLXUFnrmsb7" target="_blank" rel="noopener noreferrer">
-                {COPY.hero.ctas.join}
-              </a>
-            </Button>
-          </SignedOut>
-          <SignedIn>
-            <UserButton afterSignOutUrl="/" />
-          </SignedIn>
         </div>
 
         {/* Mobile Right-side actions */}
