@@ -21,8 +21,8 @@ export function Hero() {
       
       {/* Background Effects */}
       <div className="absolute inset-0 hero-gradient opacity-90 z-10" />
-      {/* Three.js animated particles background */}
-      <div className="absolute inset-0 z-[15]">
+      {/* Three.js animated particles background (desktop only) */}
+      <div className="absolute inset-0 z-[15] hidden md:block">
         <ThreeHero />
       </div>
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid z-20" />
