@@ -39,11 +39,7 @@ const LEADERSHIP: Member[] = [
   },
 ]
 
-const MARKETING: Member[] = [
-  { name: "Raha", role: "Creatives", image: null },
-  { name: "Yan Fong", role: "Video Team, Cameraman", image: null },
-  { name: "Tia Su", role: "Creatives", image: null },
-]
+// Marketing section intentionally removed for now; will be re-announced after full recruitment
 
 export function FoundingTeam() {
   const containerVariants = {
@@ -101,48 +97,13 @@ export function FoundingTeam() {
                   <div className="text-lg font-semibold">{m.name}</div>
                 </div>
               </div>
-              {m.desc && (
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                  {m.desc}
-                </p>
-              )}
+              
             </Card>
           </motion.div>
         ))}
       </motion.div>
 
-      {/* Marketing team */}
-      <div className="mt-10">
-        <h4 className="text-base font-semibold text-foreground/90 mb-3">Marketing</h4>
-        <motion.div
-          className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {MARKETING.map((m) => (
-            <motion.div key={m.name} variants={itemVariants}>
-              <Card className="p-5 h-full">
-                <div className="flex items-center gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 text-primary grid place-items-center font-semibold">
-                    {m.image ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img src={m.image} alt={m.name} className="w-10 h-10 rounded-full object-cover" />
-                    ) : (
-                      <span>{m.name.split(" ").map((n) => n[0]).slice(0,2).join("")}</span>
-                    )}
-                  </div>
-                  <div>
-                    <div className="text-sm font-medium">{m.name}</div>
-                    <div className="text-xs text-muted-foreground">{m.role}</div>
-                  </div>
-                </div>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
+      {/* Marketing team section hidden for now */}
     </section>
   )
 }

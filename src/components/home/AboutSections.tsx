@@ -1,12 +1,44 @@
 import { motion } from "framer-motion"
 import { WavyBackground } from "@/components/ui/wavy-background"
-import { Heart, Target, Eye, Lightbulb } from "lucide-react"
+import { Heart, Target, Eye, Lightbulb, Shield, Globe } from "lucide-react"
 
 const values = [
-  { icon: Heart, title: "Human First", description: "We prioritize human welfare and ethical AI development in everything we do." },
-  { icon: Target, title: "Action First", description: "We believe in learning by doing and creating tangible impact through our projects." },
-  { icon: Lightbulb, title: "Collaborative Spirit", description: "Together we achieve more. Collaboration is at the heart of innovation." },
-  { icon: Eye, title: "Curiosity", description: "We foster an environment of continuous learning and questioning." },
+  {
+    icon: Heart,
+    title: "Human First",
+    description:
+      "We believe AI should amplify, not replace, human intelligence. We commit to building with empathy, transparency, and a deep respect for people, society, and long-term impact.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Collaborative Spirit",
+    description:
+      "Great things are never built alone — we grow through people by building networks, sharing knowledge, and learning across disciplines, campuses, and communities.",
+  },
+  {
+    icon: Target,
+    title: "Action First",
+    description:
+      "Through constant tinkering, prototyping, and experimenting, we turn ideas into momentum and learning into real-world results.",
+  },
+  {
+    icon: Eye,
+    title: "Curiosity",
+    description:
+      "Curiosity is nurture, not nature. We dive deep, ask better questions, and find wonder in the details.",
+  },
+  {
+    icon: Shield,
+    title: "Respectful and Safe Community",
+    description:
+      "We maintain a supportive space where everyone is treated with respect. Members are considerate and keep interactions constructive and welcoming for people from all backgrounds.",
+  },
+  {
+    icon: Globe,
+    title: "AI for All — Not Just Tech Students",
+    description:
+      "AI HackerDorm is for coders and creators alike — marketers, entrepreneurs, designers, and beyond. With modern AI tools, anyone can build and create without writing a single line of code.",
+  },
 ]
 
 export function AboutSections() {
@@ -32,24 +64,11 @@ export function AboutSections() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            <h3 className="text-2xl font-bold mb-4 text-center">Our Mission</h3>
-            <p className="text-base text-muted-foreground leading-relaxed text-center">
-              To create a vibrant community where students can explore, learn, and innovate in the field of artificial intelligence. We bridge the gap between academic theory and industry practice, fostering an environment where creativity meets cutting-edge technology.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="ai-card mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="text-2xl font-bold mb-4 text-center">Our Vision</h3>
             <p className="text-base text-muted-foreground leading-relaxed text-center">
-              To be the leading AI community in Malaysia, producing graduates who are not just consumers of AI technology, but creators, innovators, and ethical leaders who shape the future of artificial intelligence for the betterment of humanity.
+              To foster an inclusive, student-led builder ecosystem that empowers all students to innovate, collaborate, and grow through hands-on projects, peer learning, and access to meaningful resources.
             </p>
           </motion.div>
 

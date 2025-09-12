@@ -1,19 +1,16 @@
 functionsDirectory = "C:\\Users\\tscr\\Downloads\\quantumnexus-ai-main\\quantumnexus-ai-main\\netlify\\functions"
-functionsDirectoryOrigin = "default"
-redirectsOrigin = "config"
+functionsDirectoryOrigin = "config-v1"
 plugins = []
 headers = []
 
 [build]
-publish = "C:\\Users\\tscr\\Downloads\\quantumnexus-ai-main\\quantumnexus-ai-main\\dist"
+publish = "C:\\Users\\tscr\\Downloads\\quantumnexus-ai-main\\quantumnexus-ai-main\\public"
 publishOrigin = "config"
 commandOrigin = "config"
-command = "npm run build"
+command = "hugo"
 functions = "C:\\Users\\tscr\\Downloads\\quantumnexus-ai-main\\quantumnexus-ai-main\\netlify\\functions"
 
 [build.environment]
-NODE_VERSION = "20"
-NPM_FLAGS = "--legacy-peer-deps"
 
 [build.processing]
 

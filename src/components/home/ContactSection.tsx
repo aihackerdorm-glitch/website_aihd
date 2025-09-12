@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Mail, MapPin, MessageCircle, Send, Instagram, Linkedin } from "lucide-react"
+import { Mail, MapPin, Send, Instagram, Linkedin } from "lucide-react"
 import { Link } from "react-router-dom"
 import { supabase } from "@/integrations/supabase/client"
 import { useToast } from "@/hooks/use-toast"
@@ -116,18 +116,7 @@ export function ContactSection() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="p-3 rounded-lg bg-primary/10">
-                    <MessageCircle className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Discord</h4>
-                    <p className="text-muted-foreground">Coming soon</p>
-                    <Button variant="outline" size="sm" className="mt-2" disabled>
-                      Coming soon
-                    </Button>
-                  </div>
-                </div>
+                {/* Discord removed for now */}
 
                 <div className="flex items-center gap-4">
                   <div className="p-3 rounded-lg bg-primary/10">
@@ -135,10 +124,15 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold">LinkedIn</h4>
-                    <p className="text-muted-foreground">Coming soon</p>
-                    <Button variant="outline" size="sm" className="mt-2" disabled>
-                      Coming soon
-                    </Button>
+                    <a
+                      href="https://www.linkedin.com/company/ai-hackerdorm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="outline" size="sm" className="mt-2">
+                        Visit LinkedIn
+                      </Button>
+                    </a>
                   </div>
                 </div>
 
@@ -148,10 +142,15 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold">Instagram</h4>
-                    <p className="text-muted-foreground">Coming soon</p>
-                    <Button variant="outline" size="sm" className="mt-2" disabled>
-                      Coming soon
-                    </Button>
+                    <a
+                      href="https://www.instagram.com/aihackerdorm_taylors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="outline" size="sm" className="mt-2">
+                        Visit Instagram
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -175,7 +174,9 @@ export function ContactSection() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Partnership Inquiry</span>
-                  <Button variant="outline" size="sm">Partner With Us</Button>
+                  <a href="mailto:aihackerdorm@gmail.com?subject=Partnership%20Inquiry" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm">Partner With Us</Button>
+                  </a>
                 </div>
               </div>
             </div>

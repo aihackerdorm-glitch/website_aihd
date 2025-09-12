@@ -77,10 +77,7 @@ export function Hero() {
           <p className="text-xl md:text-2xl text-primary/80 mb-2 max-w-2xl mx-auto">
             {COPY.hero.tagline}
           </p>
-          <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            {COPY.hero.slogan}
-          </p>
-
+          
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             initial={{ opacity: 0, y: 20 }}
@@ -88,12 +85,12 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <SignedOut>
-              <SignInButton mode="modal" fallbackRedirectUrl="/join">
-                <Button className="ai-button-primary group">
+              <Button asChild className="ai-button-primary group">
+                <a href="https://forms.gle/pbG4FWuLXUFnrmsb7" target="_blank" rel="noopener noreferrer">
                   {COPY.hero.ctas.join}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </SignInButton>
+                </a>
+              </Button>
             </SignedOut>
             <SignedIn>
               <Link to="/dashboard">
@@ -119,26 +116,6 @@ export function Hero() {
             </a>
           </motion.div>
 
-          {/* Stats */}
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <div className="ai-card text-center">
-              <h3 className="text-3xl font-bold text-primary mb-2">500+</h3>
-              <p className="text-muted-foreground">Active Members</p>
-            </div>
-            <div className="ai-card text-center">
-              <h3 className="text-3xl font-bold text-accent mb-2">50+</h3>
-              <p className="text-muted-foreground">Projects Completed</p>
-            </div>
-            <div className="ai-card text-center">
-              <h3 className="text-3xl font-bold text-primary mb-2">20+</h3>
-              <p className="text-muted-foreground">Industry Partners</p>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>

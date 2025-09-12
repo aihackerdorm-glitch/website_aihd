@@ -6,7 +6,7 @@ export const COPY = {
   hero: {
     welcomeBadge: "Welcome to AI HackerDorm",
     tagline:
-      "Empowering tomorrow's innovators through AI education, collaboration, and cutting-edge projects.",
+      "We are a community of builders.",
     rotateWords: ["Innovation", "Community", "Collaboration", "Impact"],
     slogan: "Learn AI. Build Ethically. Lead the Future.",
     ctas: {

@@ -3,36 +3,38 @@ import { Brain, Code, Users, Rocket, BookOpen, Trophy } from "lucide-react"
 import { COPY } from "@/content/copy"
 
 const features = [
-  {
-    icon: Brain,
-    title: "AI Learning Tracks",
-    description: "Structured pathways from beginner to advanced AI concepts with hands-on projects."
-  },
+  // Row 1 (left to right)
   {
     icon: Code,
-    title: "Coding Workshops",
-    description: "Weekly sessions on Python, TensorFlow, PyTorch, and emerging AI frameworks."
+    title: "Build Projects",
+    description: "Don’t just build alone - find peers and mentors who can take it further",
   },
   {
-    icon: Users,
-    title: "Collaborative Community",
-    description: "Connect with like-minded peers, mentors, and industry professionals."
-  },
-  {
-    icon: Rocket,
-    title: "Innovation Labs",
-    description: "Access to cutting-edge tools and resources for your AI projects."
+    icon: Brain,
+    title: "Inclusivity",
+    description: "From coders to creators, everyone has a role",
   },
   {
     icon: BookOpen,
-    title: "Research Opportunities",
-    description: "Participate in groundbreaking research with faculty and industry partners."
+    title: "Real-World Links",
+    description: "Connect with the people shaping tech beyond campus",
+  },
+  // Row 2 (left to right)
+  {
+    icon: Users,
+    title: "Collaborative Community",
+    description: "Find fellow students and builders in an inclusive, student-first environment",
   },
   {
     icon: Trophy,
     title: "Competitions & Hackathons",
-    description: "Showcase your skills in local and international AI competitions."
-  }
+    description: "Regular competitions and hackathons to showcase your skills",
+  },
+  {
+    icon: Rocket,
+    title: "Innovation Labs",
+    description: "Access to cutting-edge tools and resources for your AI projects.",
+  },
 ]
 
 export function Features() {
