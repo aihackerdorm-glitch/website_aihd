@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useRef, useState } from "react";
+import { LiquidLogo } from "@/components/ui/liquid-logo";
 import { useSiteVisibility } from "@/context/SiteVisibilityContext";
 
 interface LinkItem {
@@ -100,6 +101,10 @@ const Footer: React.FC<FooterProps> = ({
           <p className="text-sm mt-4">{copyrightText}</p>
         </div>
         <div className="space-y-4">
+          {/* Liquid logo animation (desktop-only by default) */}
+          <div className="flex justify-end">
+            <LiquidLogo height={80} hideOnMobile={false} />
+          </div>
           <ul className="flex flex-wrap gap-4">
             {filteredRight.map((link, index) => (
               <li key={index}>
