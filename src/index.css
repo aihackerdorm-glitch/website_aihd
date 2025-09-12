@@ -6,7 +6,10 @@
 
 @layer base {
   :root {
-    /* Core brand colors - AI-inspired */
+    /* Core brand colors - Updated to Purple/Lavender theme (branch: feature/theme-update-2025-09-12)
+       Previous primary: --primary: 195 100% 50%;  (electric cyan)
+       Previous accent:  --accent: 120 100% 50%;  (neon green)
+    */
     --background: 240 10% 4%;
     --foreground: 210 40% 98%;
 
@@ -16,10 +19,10 @@
     --popover: 240 10% 6%;
     --popover-foreground: 210 40% 98%;
 
-    /* Primary - Electric Blue/Cyan for AI energy */
-    --primary: 195 100% 50%;
+    /* Primary - Deep Purple */
+    --primary: 255 85% 60%;
     --primary-foreground: 240 10% 4%;
-    --primary-glow: 195 100% 70%;
+    --primary-glow: 255 85% 75%;
 
     /* Secondary - Deep Purple for sophistication */
     --secondary: 260 50% 20%;
@@ -28,8 +31,8 @@
     --muted: 240 10% 15%;
     --muted-foreground: 215 20% 65%;
 
-    /* Accent - Neon Green for highlights */
-    --accent: 120 100% 50%;
+    /* Accent - Soft Lavender */
+    --accent: 255 70% 85%;
     --accent-foreground: 240 10% 4%;
 
     --destructive: 0 85% 60%;
@@ -37,18 +40,18 @@
 
     --border: 240 10% 15%;
     --input: 240 10% 15%;
-    --ring: 195 100% 50%;
+    --ring: 255 85% 60%;
 
     --radius: 0.75rem;
 
-    /* Beautiful gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(195 100% 50%), hsl(260 50% 50%));
-    --gradient-hero: linear-gradient(135deg, hsl(240 10% 4%) 0%, hsl(260 50% 20%) 50%, hsl(195 100% 50%) 100%);
+    /* Gradients tuned to purple/lavender */
+    --gradient-primary: linear-gradient(135deg, hsl(255 85% 60%), hsl(255 70% 85%));
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 4%) 0%, hsl(255 40% 20%) 50%, hsl(255 85% 60%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(240 10% 6%) 0%, hsl(240 10% 8%) 100%);
     
     /* Glowing effects */
-    --glow-primary: 0 0 40px hsl(195 100% 50% / 0.3);
-    --glow-accent: 0 0 30px hsl(120 100% 50% / 0.2);
+    --glow-primary: 0 0 40px hsl(255 85% 60% / 0.35);
+    --glow-accent: 0 0 30px hsl(255 70% 85% / 0.25);
     
     /* Smooth transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -56,12 +59,12 @@
 
     --sidebar-background: 240 10% 6%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 195 100% 50%;
+    --sidebar-primary: 255 85% 60%;
     --sidebar-primary-foreground: 240 10% 4%;
     --sidebar-accent: 240 10% 15%;
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 240 10% 15%;
-    --sidebar-ring: 195 100% 50%;
+    --sidebar-ring: 255 85% 60%;
 
     /* Fixed navbar height for anchor offset */
     --nav-height: 80px;
@@ -77,9 +80,9 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 4%;
 
-    --primary: 195 100% 40%;
+    --primary: 255 85% 55%;
     --primary-foreground: 210 40% 98%;
-    --primary-glow: 195 100% 60%;
+    --primary-glow: 255 85% 70%;
 
     --secondary: 260 30% 85%;
     --secondary-foreground: 240 10% 4%;
@@ -87,7 +90,7 @@
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 120 100% 40%;
+    --accent: 255 70% 80%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 85% 50%;
@@ -95,23 +98,23 @@
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 195 100% 40%;
+    --ring: 255 85% 55%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(195 100% 40%), hsl(260 30% 60%));
-    --gradient-hero: linear-gradient(135deg, hsl(210 40% 98%) 0%, hsl(260 30% 85%) 50%, hsl(195 100% 40%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(255 85% 55%), hsl(255 70% 80%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 40% 98%) 0%, hsl(255 40% 88%) 50%, hsl(255 85% 55%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 40% 96%) 100%);
     
-    --glow-primary: 0 0 30px hsl(195 100% 40% / 0.2);
-    --glow-accent: 0 0 25px hsl(120 100% 40% / 0.15);
+    --glow-primary: 0 0 30px hsl(255 85% 55% / 0.25);
+    --glow-accent: 0 0 25px hsl(255 70% 80% / 0.2);
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 240 10% 4%;
-    --sidebar-primary: 195 100% 40%;
+    --sidebar-primary: 255 85% 55%;
     --sidebar-primary-foreground: 210 40% 98%;
     --sidebar-accent: 210 40% 96%;
     --sidebar-accent-foreground: 240 10% 4%;
     --sidebar-border: 214 32% 91%;
-    --sidebar-ring: 195 100% 40%;
+    --sidebar-ring: 255 85% 55%;
   }
 
   /* Animated wavy underline for headings */
@@ -157,9 +160,9 @@
     @apply bg-background text-foreground antialiased;
     background: hsl(var(--background));
     background-image: 
-      radial-gradient(circle at 20% 80%, hsl(195 100% 50% / 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(260 50% 50% / 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, hsl(120 100% 50% / 0.03) 0%, transparent 50%);
+      radial-gradient(circle at 20% 80%, hsl(255 85% 60% / 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(255 70% 85% / 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, hsl(255 40% 20% / 0.04) 0%, transparent 50%);
   }
 
   h1, h2, h3, h4, h5, h6 {
