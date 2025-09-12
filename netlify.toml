@@ -1,0 +1,16 @@
+# Netlify configuration for AI HackerDorm site
+# Restored to fix deployments
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# If you have Netlify Functions in the default directory
+[functions]
+  directory = "netlify/functions"
+
+# Single Page App (Vite/React) fallback routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
